@@ -1,0 +1,71 @@
+ public string No { get; set; }
+        enum Category
+        {
+            Programming=1,
+            Design,
+            SystemAdministration
+        }
+        public bool IsOnline { get; set; }
+        private int _limit { get; set; }
+        List<Student>  List;
+        List<Group> Grup;
+        public string[] NoList;
+        public int GroupCount;
+        public Group(Group Qrup)
+        {
+            IsOnline = Qrup.IsOnline;
+            if (IsOnline)
+            {
+                _limit = 15;
+            }
+            else
+            {
+                _limit = 10;
+            }
+            bool IsEqual = false;
+            foreach (var item in Grup)
+            {
+                if (item.No==Qrup.No)
+                {
+                    IsEqual = true;
+                }
+            }
+            if (IsEqual==false)
+            {
+                No = Qrup.No;
+                Grup.Add(Qrup);
+            }
+        }
+        public void Qrup(Group qrup)
+        {
+
+        }
+        public void AddStudent(Student student)
+        {
+            if (List.Count < _limit)
+            {
+                List.Add(student);
+            }
+            else
+            {
+                Console.WriteLine("qrup doludur");
+            }
+        }
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Qrup: {No} IsOnline: {IsOnline} Telebelerin sayi; {List.Count}");
+        }
+        public void ShowStudents()
+        {
+            foreach (var item in List)
+            {
+                Console.WriteLine($"Telebe adi: {item.FullName} Tip: {item.Type}");
+            }
+        }
+        public void ShowAllStudents()
+        {
+            foreach (var item in Grup)
+            {
+                Console.WriteLine($" Qrup: {item.No}");
+            }
+        }

@@ -1,0 +1,14 @@
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\bin\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).exe
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\bin\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).deps.json
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\bin\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).runtimeconfig.json
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\bin\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).runtimeconfig.dev.json
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\bin\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).dll
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\bin\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).pdb
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\obj\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).csproj.AssemblyReference.cache
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\obj\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\obj\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).AssemblyInfoInputs.cache
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\obj\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).AssemblyInfo.cs
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\obj\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).csproj.CoreCompileInputs.cache
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\obj\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).dll
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\obj\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).pdb
+C:\Users\Emil Hajizade\Desktop\C#  tap\ConsoleApp3(ref ve out)\ConsoleApp3(ref ve out)\obj\Debug\netcoreapp3.1\ConsoleApp3(ref ve out).genruntimeconfig.cache

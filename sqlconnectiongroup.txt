@@ -1,0 +1,126 @@
+using System;
+using System.Data.SqlClient;
+
+namespace ConsoleApp16
+{
+    class Program
+    {
+        private const string connectionStr = "Server=DESKTOP-OT3RPGF;Database=SQLCONNECTION;Integrated Security=true;";
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.WriteLine($"\n1.Show Groups" +
+                    $"\n2.Insert Group" +
+                    $"\n3.Update Group" +
+                    $"\n4.Delete Group");
+                int input = int.Parse(Console.ReadLine());
+                switch (input)
+                {
+                    case 1:
+                        SelectAll();
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter Group Number: ");
+                        string GroupName = Console.ReadLine();
+                        Insert(GroupName);
+                        break;
+                    case 3:
+                        string Column=string.Empty;
+
+                        bool isExist = false;
+                        try
+                        {
+                            Console.WriteLine("Enter Column Name: ");
+                            Column = Console.ReadLine();
+                            string query = "SELECT Column FROM GROUPS";
+                            SqlConnection connection = new SqlConnection(@connectionStr);
+                            SqlCommand command = new SqlCommand(query, connection);
+                            command.ExecuteNonQuery();
+                        }
+                        catch (Exception)
+                        {
+                            isExist = true;
+                            Console.WriteLine("Column Does Not Exist");
+                        }
+                        if (isExist==false)
+                        {
+                            Console.WriteLine("Enter Id: ");
+                            int id = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Enter New Data: ");
+                            string newData = Console.ReadLine();
+                            Update(id, Column, newData);
+                        }
+                       
+
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter Group Id:");
+                        int Id = int.Parse(Console.ReadLine());
+                        Delete(Id);
+                        break;
+                    default:
+                        break;
+                }
+               
+            }
+        }
+        static void Insert(string name)
+        {
+                SqlConnection connection = new SqlConnection(@connectionStr);
+                string query = $"INSERT INTO GROUPS VALUES('{name}')";
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+                Console.Clear();
+                Console.WriteLine("group already exists");
+           
+        }
+        static void Delete(int id)
+        {
+            SqlConnection connection = new SqlConnection(@connectionStr);
+            string query = $"DELETE FROM GROUPS WHERE Id={id}";
+            SqlCommand command = new SqlCommand(query, connection);
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+        static void Update(int id, object Column, object newData)
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection(@connectionStr);
+                string query = $"UPDATE GROUPS SET {Column} = '{newData}' WHERE Id={id}";
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                command.ExecuteScalar();
+                connection.Close();
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Column Does not exist");
+            }
+          
+        }
+        static void SelectAll()
+        {
+          
+            SqlConnection conn = new SqlConnection(connectionStr);
+            conn.Open();
+            string query = "Select * from GROUPS";
+            using (SqlCommand command=new SqlCommand(query,conn))
+            {
+                SqlDataReader result = command.ExecuteReader();
+                while(result.Read())
+                {
+                    Console.WriteLine(result["GroupNo"]); 
+                }
+            }
+            conn.Close();
+        }
+    }
+}
+
+
